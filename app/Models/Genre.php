@@ -9,4 +9,8 @@ class Genre extends Model
     use Traits\Uuid;
 
     protected $fillable = ['name', 'is_active'];
+    protected $casts = [
+        "id" => "string"
+    ];
+    public $incrementing = false;
 }
